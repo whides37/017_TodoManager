@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+
+
+README2.md
+
+.venv
+server.py
+frontend/
+
+test.html
+test_data.py
