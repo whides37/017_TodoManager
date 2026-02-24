@@ -1,7 +1,7 @@
-{
-    "title":"UI修正",
-    "deadline":"2026-03-01",
-    "completed":false
-}
-
-// JSONはdatetime使えないので、読み込み時にdetetimeに戻す
+[
+    {
+        "title": "UI修正",
+        "deadline": "2026-03-02",
+        "completed": false
+    }
+]
