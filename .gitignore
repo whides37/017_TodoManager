@@ -2,6 +2,7 @@ __pycache__/
 *.pyc
 
 
+
 README2.md
 
 .venv
@@ -10,3 +11,7 @@ frontend/
 
 test.html
 test_data.py
+
+React
+App.jsx
+my-todo-app/
