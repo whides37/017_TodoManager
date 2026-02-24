@@ -13,15 +13,10 @@ completed(bool)
 - fetch で通信
 
 ## React起動手順
-① プロジェクト作成
-ターミナルで好きなフォルダに移動して下記実行：
-npm create vite@latest my-todo-app --template react
+- backend 起動
+cd backend
+uvicorn main:app --reload
 
-② プロジェクトに入る
-cd my-todo-app
-
-③ 必要なパッケージをインストール
-npm install
-
-④ 開発サーバーを起動
+- frontend 起動
+cd ../frontend
 npm run dev
