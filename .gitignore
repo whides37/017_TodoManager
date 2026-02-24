@@ -8,6 +8,7 @@ README2.md
 .venv
 server.py
 frontend/
+backend/
 
 test.html
 test_data.py
