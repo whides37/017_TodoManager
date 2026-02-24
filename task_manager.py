@@ -32,3 +32,9 @@ class TaskManager:
             raise KeyError("そのタスクは存在しません")
         
         #一覧表示
+        def list_tasks(self):
+            return [str(task)for task in self.tasks]
+        
+        #期限切れタスク表示
+        def list_overdue_tasks(self):
+            return [str(task)for task in self.tasks if task.is_overdue()]
