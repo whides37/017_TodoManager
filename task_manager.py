@@ -38,3 +38,31 @@ class TaskManager:
         #期限切れタスク表示
         def list_overdue_tasks(self):
             return [str(task)for task in self.tasks if task.is_overdue()]
+        
+        #JSON保存
+        def save_data(self):
+            data = []
+
+            for task in self.tasks:
+                data.append({
+                    "title":task.title,
+                    "deadline":task.deadline.strftime("%Y-%m-%d"),
+                    "completed":task.completed
+                })
+
+            with open("tasks.json","w",encoding="utf-8")as f:
+                json.dump(data,f,ensure_ascii=False,indent=4)
+
+        #JSON読み込み
+        def load_data(self):
+            try:
+                with open("tasks.json","r",encoding="utf-8")as f:
+                    data = json.load(f)
+
+                    for item in data:
+                        task = Task(item["title"],item["deadline"])
+                        task.completed = item["completed"]
+                        self.tasks.append(task)
+
+            except FileNotFoundError:
+                pass
